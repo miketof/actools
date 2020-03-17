@@ -174,6 +174,9 @@ namespace AcManager.Pages.Drive {
             };
             _realConditionsTimer.Interval = TimeSpan.FromMinutes(0.5);
             _realConditionsTimer.Start();
+
+            if (AppArguments.Has(AppFlag.InstantRace)) 
+                Model.Run();
         }
 
         private void OnUnloaded(object sender, RoutedEventArgs e) {

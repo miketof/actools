@@ -198,10 +198,6 @@ namespace AcManager.Pages.Windows {
 
         private static Uri _navigateOnOpen;
 
-        public static void NavigateOnOpen(Uri uri) {
-            _navigateOnOpen = uri;
-        }
-
         protected override void OnLoadedOverride() {
             if (_navigateOnOpen != null) {
                 NavigateTo(_navigateOnOpen);
@@ -210,6 +206,10 @@ namespace AcManager.Pages.Windows {
             }
 
             // SettingsShadersPatch.GetShowSettingsCommand().Execute(null);
+        }
+
+        public static void NavigateOnOpen(Uri uri) {
+            _navigateOnOpen = uri;
         }
 
         private readonly Busy _openDownloadsListBusy = new Busy();

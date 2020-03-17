@@ -73,6 +73,7 @@ namespace AcManager {
             }
 
             AppArguments.Initialize(a);
+            
             var data = AppArguments.Get(AppFlag.StorageLocation);
             if (!string.IsNullOrWhiteSpace(data)) {
                 ApplicationDataDirectory = Path.GetFullPath(data);

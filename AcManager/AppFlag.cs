@@ -11,6 +11,12 @@ namespace AcManager {
         PatchSupport,
 
         /// <summary>
+        /// Runs a race with last configuration.
+        /// Example: --instant-race.
+        /// </summary>
+        InstantRace,
+
+        /// <summary>
         /// For development purposes.
         /// Example: --hide-race-cancel-button.
         /// </summary>
